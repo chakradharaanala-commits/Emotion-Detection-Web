@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- face-api.js -->
+    <script defer
+            src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js">
+    </script>
+
+    <script defer
+            src="{{ url_for('static', filename='script.js') }}">
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Emotion Detection AI</h1>
+
+    <p class="subtitle">
+        Real-Time Emotion Detection using face-api.js
+    </p>
+
+    <button id="startBtn">
+        Start Camera
+    </button>
+
+    <div class="video-container">
+
+        <video id="video"
+               autoplay
+               muted
+               playsinline>
+        </video>
+
+        <canvas id="overlay"></canvas>
+
+    </div>
+
+    <div class="emotion-box">
+
+        <h2>Detected Emotions</h2>
+
+        <div id="emotionResults">
+            Click "Start Camera" to begin.
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
